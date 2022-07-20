@@ -1,0 +1,17 @@
+{
+  "name": "foodie",
+  "version": "1.0.0",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build index.html --dist-dir dist"
+  },
+  "author": "Oyefule Oluwatayo",
+  "license": "ISC",
+  "description": "Prototype website design of Food.com",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "node-sass": "^7.0.1",
+    "parcel": "^2.6.2"
+  }
+}

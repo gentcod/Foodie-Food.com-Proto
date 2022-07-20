@@ -1,0 +1,92 @@
+footer{
+    background-color: $color-black;
+    padding: 2rem;
+
+    @include clearfix;
+}
+
+.back-to-top{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    &:hover{
+        color: $color-green-cyde;
+    }
+}
+.footer{
+    &-left{
+        float: left;
+        width: 20%;
+        margin: 0 auto;
+        margin-left: 40rem;
+        text-align: right;
+    }
+
+    &-right{
+        float: left;
+        width: 20%;
+        margin: 0 auto;
+        margin-left: 30rem;
+        text-align: right;
+    }
+
+    &-nav{
+        line-height: 1.2;
+    }
+
+    &-nav-link{
+
+        &-left{
+            color: $color-green-cyde;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            &:not(:last-child){
+                margin-right: 1rem;
+            }
+        }
+
+        &-right{
+            color: $color-green-cyde;
+            text-decoration: none;
+            font-size: 1rem;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            &:not(:last-child){
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+.details{
+
+    &-paragraph{
+    color: $color-white;
+    font-size: 1rem;
+    line-height: 1.2;
+    }
+
+    &-container{
+        margin-bottom: 1rem;
+    }
+
+    &-heading{
+        font-size: 1rem;
+        color: $color-green-cyde;
+        text-align: right;
+        text-decoration: none;
+    }
+}

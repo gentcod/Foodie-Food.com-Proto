@@ -1,0 +1,15 @@
+.material-icons-outlined{
+    font-size: 1.8rem; 
+    display: inline-block;
+    text-transform: none;
+
+    &-small{
+        font-size: 1rem;
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal; 
+        display: inline-block;
+        text-transform: none;
+        font-feature-settings: 'liga';
+    }
+}

@@ -1,0 +1,21 @@
+@keyframes replace{
+    0%{
+        content: "OUR TOP 50 MOST-SAVED RECIPES";
+    }
+    50%{
+        content: "50 TOP JAPANESE MEALS TO MAKE AT HOME";
+    }
+    100%{
+        content: "TOP 100 PANTRY RECIPES";
+    }
+}
+@keyframes but-anime {
+    0%{
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: .5;
+    }
+}

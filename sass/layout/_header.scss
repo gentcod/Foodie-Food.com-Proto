@@ -1,0 +1,151 @@
+.header{
+    height: 55vh;
+    width: 100%;
+    background-image: linear-gradient(rgba($color-white, 0.8), rgba($color-header, 0.8)), url(/img/background.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+menu{
+    max-width: 100%;
+    background-color: rgba($color-header, 0.9);
+    background-position: top;
+    background-attachment: fixed;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0 auto;
+
+    &.active {
+        background-color: rgba($color-header-dark, 0.9);
+    }
+
+    @include clearfix;
+
+    .logo{
+        float: left;
+        width: 15%;
+        margin-right: 2rem;
+        margin-left: 42rem;
+
+        &-word{
+            .log{
+                text-decoration: none;
+            }
+            .food{
+                display: inline-block;
+                font-family: 'Artifika', serif;
+                font-size: 4.5rem;
+                text-align: right;
+                color: $color-white;
+            }
+            .dot{
+                display: inline-block;
+                font-family: 'Artifika', serif;
+                font-size: 4.5rem;
+                text-align: right;
+                color: yellow;
+            }
+        }
+    }
+    .topleft{
+        float: left;
+        list-style: none;
+        margin-right: 5rem;
+    }
+    
+    .topright{
+        float: left;
+        list-style: none;
+    }
+    li{
+        float: left;
+        margin-top: 30px;
+    
+        & a{
+            &:link,
+            &:visited{
+                font-size: 1.4rem;
+                color: $color-white;
+                text-align: center;
+                padding-top: 3rem;
+                padding-bottom: 2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-decoration: none;
+                letter-spacing: .2rem;
+                }   
+                &:hover{
+                color: $color-green-cyde;
+                }   
+            
+        }
+    }
+}
+.info{
+    max-width: fit-content;
+    position: relative;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    background-color: $color-green-cyde;
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transform: translate(50rem);
+    clip-path: polygon(0% 25%, 20% 25%, 20% 0%, 23% 25%, 100% 20%, 100% 100%, 0% 100%);
+    border-radius: 1rem;
+
+    &.active {
+        background-color: $color-green-cyde-dark;
+    }
+}
+.fave:link{
+    text-decoration: none;
+    color: $color-black;
+}
+.fave:hover{
+    text-decoration: underline;
+}
+.headtitle{
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 50rem;
+    padding: 0;
+    margin-bottom: 5rem;
+       
+
+    &-word-replace {
+        visibility: hidden;
+        position: relative;
+
+        &:hover::before {
+            text-decoration: underline;
+            text-decoration-color: $color-white;
+        }
+        
+
+        &::before {
+            display: inline-block;
+            line-height: 1.2;
+            letter-spacing: .2rem;
+            padding: .5rem;
+            font-size: 4rem;
+            font-weight: 550;
+            color: $color-white;
+            box-sizing: border-box;
+            width: 45rem;
+            visibility: visible;
+            position: relative;
+            content: "OUR TOP 50 MOST-SAVED RECIPES";
+            animation: replace infinite 15s;
+        }
+        
+    }
+}

@@ -1,0 +1,37 @@
+.headtitle-btn{
+    &:link,
+    &:visited{
+        visibility: visible;
+        position: absolute;
+        top: 5rem;
+        right: -12rem;
+        font-size: 1.2rem;
+        display: inline-block;
+        background-color: $color-green-cyde;
+        padding: 1rem 1.5rem;
+        text-decoration: none;
+        border-radius: 1rem;
+        color: $color-black;
+        transition: all .8s ease;
+
+        animation: but-anime 1s ease-in;
+        animation-fill-mode: backwards;
+
+    &.active {
+        background-color: $color-green-cyde-dark;
+
+        &:hover{
+            background-color: $color-magenta-dark;
+            color: $color-white;
+        }
+    }
+    }
+    &:hover{
+        background-color: $color-magenta;
+        color: $color-white;
+    }
+    &:active{
+        border: 1px solid $color-white-2;
+        transform: translateY(.5rem);
+    }
+}

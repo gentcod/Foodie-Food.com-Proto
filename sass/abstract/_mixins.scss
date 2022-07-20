@@ -1,0 +1,19 @@
+@mixin square{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+@mixin text-pref {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: $color-white;
+    text-align: left;
+    line-height: 1.2;
+
+}

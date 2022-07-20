@@ -1,0 +1,24 @@
+.row{
+    max-width: 120rem;
+    margin: 0 auto;
+
+    @include clearfix;
+
+    [class*="col-"] {
+        float: left;
+        padding: 1.5rem;
+    
+        &:not(:last-child){
+            margin-right: $gutter-horizonal;
+        }
+    
+    }
+    
+    .col-1-of-4{
+        width: calc((100% - ($gutter-horizonal * 3)) / 4);
+    }
+    .col-2-of-4{
+        width: calc((100% - $gutter-horizonal) / 2);
+    }    
+}
+

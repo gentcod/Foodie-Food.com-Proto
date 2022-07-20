@@ -1,0 +1,267 @@
+.section{
+    &-body{
+        transform: translateY(-2rem) translateX(-15rem);
+
+        &-ext-2{
+            background-color: $color-white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+
+            &.active {
+                background-color: $color-white-2;
+            }
+    
+            & a:link,
+            a:visited{
+                text-decoration: none;
+                color: $color-black;
+            }
+    
+            & a:hover{
+                color: $color-magenta;
+            }
+    
+        }
+
+        &-ext-3{
+            background-color: $color-white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+
+            &.active {
+                background-color: $color-white-2;
+            }
+    
+            & a:link,
+            a:visited{
+                text-decoration: none;
+                color: $color-black;
+            }
+    
+            & a:hover{
+                color: $color-magenta;
+            }
+        }
+
+        &-end{
+            background-image: linear-gradient(to right, rgba($color-magenta-light, 1), rgba($color-magenta-dark, 1));
+            padding: 8rem;
+            text-align: center;
+
+            &-cont{
+                width: 50rem;
+                margin: 0 auto;
+            }
+
+            & input{
+                border: 0;
+                margin-bottom: 5px;
+                font-size: 1.2rem;
+                width: 25rem;
+
+            }
+
+            input:focus{
+                outline: none;
+            }
+
+        }
+    
+    }
+    &-row{
+        max-width: 64rem;
+        margin: 0 auto;
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        @include clearfix;
+    }
+    &-col{
+        float: left;
+        background-color: $color-white;
+        border-bottom: 5px solid $color-green-cyde;
+        box-sizing: border-box;
+        max-width: 20rem;
+        height: 21rem;
+        padding: 0;
+        border-radius: .5rem;
+
+        &.active {
+            background-color: $color-white-2;
+            border-bottom: 5px solid $color-green-cyde-dark;
+        }
+        
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+
+    &-row-mid-rep{
+        display: inline-block;
+        background-color: $color-black;
+        color: $color-white;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+    
+        & a:link{
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: $color-green-cyde;
+            text-transform: uppercase;
+        }
+        & a:link:hover{
+            text-decoration: underline;
+        }
+        
+    }
+    &-col-img{
+        display: inline-block;
+        background-attachment: fixed;
+        width: 100%;
+        border-radius: .5rem;
+    }
+    &-col-text{
+        text-align: center;
+        text-decoration: none;
+        color: $color-black;
+        font-size: 12px;
+
+        &:hover{
+            color: $color-magenta;
+        }
+        
+    }
+
+    &-what{
+        display: inline-block;
+        position: absolute;
+        right: 40rem;
+        top: 40rem;
+        background-color: $color-white;
+
+        &.active {
+            background-color: $color-white-2;
+        }
+    
+        &-heading{
+            background-color: $color-black;
+            color: $color-white;
+            text-align: center;
+            letter-spacing: .5rem;
+            font-size: 1.2rem;
+            padding: 1.5rem;
+            border-bottom: .5rem solid $color-green-cyde;
+
+            &.active {
+                border-bottom: .5rem solid $color-green-cyde-dark;
+            }
+        }
+        &-frame{
+            display: inline-block;
+            background-color: $color-white;
+            border: 0;
+            height: 35rem;
+            width: 30rem;
+            overflow: auto;
+
+            &.active {
+                background-color: $color-white-2;
+            }
+        }
+        &-view{
+            background-color: $color-black;
+            color: $color-green-cyde;
+            text-align: center;
+            letter-spacing: .5rem;
+            font-size: 1.2rem;
+            padding: 1rem;
+            border: 0;
+        
+            & a{
+                text-decoration: none;
+                color: $color-white
+            }
+            & a:hover{
+                color: $color-green-cyde;
+            }
+        }
+    }
+    &-body-ext{
+    
+        &-heading{
+            font-family: 'lato', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 400;
+            letter-spacing: 3px;
+            font-size: 2.4rem;
+            font-weight:lighter;
+            text-transform: uppercase;
+            margin-left: 2rem;
+    
+        }
+        &-img{
+            display: inline-block;
+            height: 38rem;
+            width: 100%;
+            object-fit: cover;
+            
+            &-wrap{
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+
+        &-label{
+            display: inline-block;
+            position: relative;
+    
+            &-tag{
+                padding: .5rem 1rem .5rem 1rem;
+                position: absolute;
+                bottom: 15%;
+    
+                & span{
+                    padding: 1rem;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    background-color: $color-black;
+                    color: $color-white;
+                }
+            }
+            &-text{
+                margin-top: 2rem;
+                width: 15rem;
+                font-size: 2rem;
+                @include text-pref;
+
+                &.active {
+                    background-color: $color-white-2;
+                }
+        
+                &--big{
+                    margin-top: 2rem;
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                    @include text-pref;
+
+                    &.active {
+                        background-color: $color-white-2;
+                    }
+                }
+            }
+        }
+    }
+}
+.feature-box{
+    display: inline-block;
+    position: relative;
+}
