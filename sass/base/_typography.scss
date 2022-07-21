@@ -1,3 +1,15 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    background-color: $color-white-2;
+
+    &.active {
+        background-color: $color-background-dark;
+    }
+}
+
 .material-icons-outlined{
     font-size: 1.8rem; 
     display: inline-block;

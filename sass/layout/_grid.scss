@@ -15,10 +15,10 @@
     }
     
     .col-1-of-4{
-        width: calc((100% - ($gutter-horizonal * 3)) / 4);
+        width: calc((100% - (#{$gutter-horizonal} * 3)) / 4);
     }
     .col-2-of-4{
-        width: calc((100% - $gutter-horizonal) / 2);
-    }    
+        width: calc((100% - #{$gutter-horizonal}) / 2);
+    }
 }
 

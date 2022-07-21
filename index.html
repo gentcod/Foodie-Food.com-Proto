@@ -9,7 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Artifika&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="./sass/main.scss">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- <link rel="stylesheet" href="./sass/main.scss"> -->
         <title>Foodie.com</title>
         <script src="./js/app.js" defer="true"></script>
     </head>
@@ -18,26 +19,30 @@
         <!-- Header Section -->
         <header class="header" id="header">
             <menu>
-                <div class="logo">
-                    <div>
-                        <a href="#home" class="logo-word">
-                            <span class="food">Foodie</span>
-                            <span class="dot">.</span>
-                        </a>
+                <div class="header-menu">
+                    <div class="logo">
+                        <div>
+                            <a href="#home" class="logo-word">
+                                <span class="food">Foodie</span>
+                                <span class="dot">.</span>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="header-nav">
+                        <ul class="header-nav--item">
+                            <li><a href="#recipe"><b>RECIPES</b></a></li>
+                            <li><a href="#popular"><b>POPULAR</b></a></li>
+                            <li><a href="#health"><b>HEALTH</b></a></li>
+                        </ul>
+        
+                        <ul class="header-nav--item">
+                            <li><a href="#search"><i class="fa-solid fa-magnifying-glass material-icons-outlined"></i><b>SEARCH</b></a></li>
+                            <li><a href="#saves"><i class="fa-solid fa-bookmark material-icons-outlined"></i><b>SAVES</b></a></li>
+                            <li><a href="#signin"><i class="fa-solid fa-user material-icons-outlined"></i><b>SIGN IN</b></a></li>
+                        </ul>
                     </div>
                 </div>
-
-                <ul class="topleft" id="topleft">
-                    <li><a href="#recipe"><b>RECIPES</b></a></li>
-                    <li><a href="#popular"><b>POPULAR</b></a></li>
-                    <li><a href="#health"><b>HEALTH</b></a></li>
-                </ul>
-
-                <ul class="topright">
-                    <li><a href="#search"><i class="fa-solid fa-magnifying-glass material-icons-outlined"></i><b>SEARCH</b></a></li>
-                    <li><a href="#saves"><i class="fa-solid fa-bookmark material-icons-outlined"></i><b>SAVES</b></a></li>
-                    <li><a href="#signin"><i class="fa-solid fa-user material-icons-outlined"></i><b>SIGN IN</b></a></li>
-                </ul>
 
                 <div class="theme">
                     <div class="theme__container">
@@ -48,16 +53,18 @@
                 </div>
             </menu>
 
-            <nav class="info">
-                <p><b>HOT THIS WEEK</b>: 75 TOP RATED RECIPES EVER <a href="#" class="fave"><b>WHAT ARE YOUR FAVES?</b></a></p>
+            <nav class="logo-info">
+                <p><b>THIS WEEK</b>: 75 TOP RATED RECIPES EVER <a href="#" class="fave"><b>WHAT ARE YOUR FAVES?</b></a></p>
             </nav>
 
-            <div class="headtitle">
-                <h2>
-                    <a href="#head" class="headtitle-word-replace">text</a>
-                </h2>
-    
-                <a href="#ban" class="headtitle-btn">BANANA BREAD</a>
+            <div class="headtitle-container">
+                <div class="headtitle-content">
+                    <h2 class="headtitle-content-heading">
+                        <a href="#head" class="headtitle-content-heading--word-replace">text</a>
+                    </h2>
+        
+                    <a href="#ban" class="headtitle-content-btn">BANANA BREAD</a>
+                </div>
             </div>
         </header>
 
@@ -140,7 +147,7 @@
             </div>
             
             <!--Top middle section-->
-            <section class="section-body-ext-2">
+            <section class="section-body-ext section-body-ext-2">
     
                 <div class="row">
                     <div class="section-body-ext-heading">
@@ -208,7 +215,7 @@
             </section>
             
             <!--Bottom middle section-->
-            <section class="section-body-ext-3">
+            <section class=" section-body-ext section-body-ext-3">
     
                 <div class="row">
                     <div class="section-body-ext-heading">

@@ -1,13 +1,15 @@
 .header{
-    height: 55vh;
+    height: 45rem;
     width: 100%;
     background-image: linear-gradient(rgba($color-white, 0.8), rgba($color-header, 0.8)), url(/img/background.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
+
 }
 menu{
     max-width: 100%;
+    height: 8rem;
     background-color: rgba($color-header, 0.9);
     background-position: top;
     background-attachment: fixed;
@@ -16,8 +18,12 @@ menu{
     display: block;
     position: sticky;
     top: 0;
-    z-index: 1;
     margin: 0 auto;
+
+    .header-menu {
+        margin: 0 auto;
+    }
+
 
     &.active {
         background-color: rgba($color-header-dark, 0.9);
@@ -26,10 +32,9 @@ menu{
     @include clearfix;
 
     .logo{
-        float: left;
+        display: inline-block;
         width: 15%;
         margin-right: 2rem;
-        margin-left: 42rem;
 
         &-word{
             .log{
@@ -51,30 +56,32 @@ menu{
             }
         }
     }
-    .topleft{
-        float: left;
-        list-style: none;
-        margin-right: 5rem;
+
+    .header-nav {
+        display: inline-block;
+        width: 75rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+
+        @include clearfix;
+
+        &--item {
+            float: left;
+            list-style: none;
+            width: calc((100% - 6rem) / 2);
+            padding: 1rem;
+        }
     }
-    
-    .topright{
-        float: left;
-        list-style: none;
-    }
+
     li{
-        float: left;
-        margin-top: 30px;
-    
+        display: inline-block;
         & a{
             &:link,
             &:visited{
                 font-size: 1.4rem;
                 color: $color-white;
                 text-align: center;
-                padding-top: 3rem;
-                padding-bottom: 2rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
+                padding: 2rem 1rem;
                 text-decoration: none;
                 letter-spacing: .2rem;
                 }   
@@ -85,7 +92,8 @@ menu{
         }
     }
 }
-.info{
+
+.logo-info{
     max-width: fit-content;
     position: relative;
     padding-top: 1.5rem;
@@ -105,47 +113,66 @@ menu{
         background-color: $color-green-cyde-dark;
     }
 }
-.fave:link{
+.fave:active,
+:link,
+:visited{
     text-decoration: none;
     color: $color-black;
 }
 .fave:hover{
     text-decoration: underline;
 }
-.headtitle{
-    display: block;
-    position: absolute;
-    top: 60%;
-    left: 50rem;
-    padding: 0;
-    margin-bottom: 5rem;
-       
 
-    &-word-replace {
-        visibility: hidden;
+.headtitle{
+    &-container {
+        display: block;
+        height: 20rem;
+        width: 100rem;
+        margin: 0 auto;
+        margin-top: 10rem;
+    }
+    
+    &-content {
+        height: inherit;
+        width: inherit;
+        margin: 0 auto;
+        padding: 3rem;
         position: relative;
 
-        &:hover::before {
-            text-decoration: underline;
-            text-decoration-color: $color-white;
-        }
-        
-
-        &::before {
+        &-heading {
+            height: 20rem;
+            width: 60rem;
+            padding: 0;
+            margin-bottom: 5rem;
             display: inline-block;
-            line-height: 1.2;
-            letter-spacing: .2rem;
-            padding: .5rem;
-            font-size: 4rem;
-            font-weight: 550;
-            color: $color-white;
-            box-sizing: border-box;
-            width: 45rem;
-            visibility: visible;
-            position: relative;
-            content: "OUR TOP 50 MOST-SAVED RECIPES";
-            animation: replace infinite 15s;
-        }
+
+            &--word-replace {
+                visibility: hidden;
         
+                &:hover::before {
+                    text-decoration: underline;
+                    text-decoration-color: $color-white;
+                }
+                
+        
+                &::before {
+                    display: inline-block;
+                    line-height: 1.2;
+                    letter-spacing: .2rem;
+                    padding: .5rem;
+                    font-size: 4rem;
+                    font-weight: 550;
+                    color: $color-white;
+                    box-sizing: border-box;
+                    width: 45rem;
+                    visibility: visible;
+                    position: relative;
+                    content: "OUR TOP 50 MOST-SAVED RECIPES";
+                    animation: replace infinite 15s;
+                }
+                
+            }
+        }
     }
+
 }

@@ -1,10 +1,8 @@
-.headtitle-btn{
+.headtitle-content-btn{
     &:link,
     &:visited{
-        visibility: visible;
         position: absolute;
-        top: 5rem;
-        right: -12rem;
+        top: 7rem;
         font-size: 1.2rem;
         display: inline-block;
         background-color: $color-green-cyde;
