@@ -32,20 +32,20 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   padding: 1rem; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     body {
       padding: 0; } }
 
@@ -101,6 +101,10 @@ body {
   border: 1px solid #cacaca;
   transform: translateY(0.5rem); }
 
+@media only screen and (max-width: 75em) {
+  .headtitle-content-btn {
+    margin: 0 auto; } }
+
 .suggestions {
   display: inline-block;
   color: #222;
@@ -120,7 +124,8 @@ body {
   background-color: #fff;
   margin-bottom: 1rem;
   padding-top: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  margin: 0 auto; }
 
 .comment-wrap-inner {
   display: inline-block;
@@ -168,7 +173,7 @@ menu {
   top: 0;
   margin: 0 auto;
   z-index: 5; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     menu {
       height: 6rem; } }
   menu.active {
@@ -189,9 +194,6 @@ menu {
   height: 7rem;
   margin-left: 35rem;
   text-decoration: none; }
-  @media (max-width: 56.25em) {
-    .header-logo {
-      margin-left: 5rem; } }
   .header-logo-word {
     display: inline-block;
     text-decoration: none; }
@@ -233,6 +235,9 @@ menu {
         letter-spacing: .2rem; }
       .header-nav--item li a:hover {
         color: #6ddee2; }
+  @media only screen and (max-width: 75em) {
+    .header-nav {
+      display: none; } }
 
 .header-logo-info {
   max-width: fit-content;
@@ -260,6 +265,10 @@ menu {
     .header-logo-info :link:hover,
     .header-logo-info :visited:hover {
       text-decoration: underline; }
+  @media only screen and (max-width: 75em) {
+    .header-logo-info {
+      transform: translate(0);
+      max-width: inherit; } }
 
 .headtitle-container {
   display: block;
@@ -301,7 +310,7 @@ menu {
         animation: replace infinite 15s; }
 
 .row {
-  width: 120rem;
+  max-width: 120rem;
   margin: 0 auto; }
   .row::after {
     content: "";
@@ -312,18 +321,21 @@ menu {
     padding: 1.5rem; }
     .row [class*="col-"]:not(:last-child) {
       margin-right: 1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 100%; } }
 
 .col-1-of-4 {
   width: calc((100% - (1rem * 3)) / 4); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-1-of-4 {
-      width: 100%; } }
+      width: calc(100%); } }
 
 .col-2-of-4 {
   width: calc((100% - 1rem) / 2); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .col-2-of-4 {
-      width: 100%; } }
+      width: inherit; } }
 
 footer {
   background-color: #222;
@@ -344,19 +356,30 @@ footer {
   .back-to-top:hover {
     color: #6ddee2; }
 
-.footer-left {
+.footer-item {
   float: left;
   width: 20%;
   margin: 0 auto;
-  margin-left: 40rem;
   text-align: right; }
+  @media only screen and (max-width: 56.25em) {
+    .footer-item {
+      width: 100%;
+      margin-left: 0;
+      text-align: center; } }
+
+.footer-left {
+  margin-left: 40rem; }
+  @media only screen and (max-width: 56.25em) {
+    .footer-left {
+      width: 100%;
+      margin-left: 0; } }
 
 .footer-right {
-  float: left;
-  width: 20%;
-  margin: 0 auto;
-  margin-left: 30rem;
-  text-align: right; }
+  margin-left: 30rem; }
+  @media only screen and (max-width: 56.25em) {
+    .footer-right {
+      width: 100%;
+      margin-left: 0; } }
 
 .footer-nav {
   line-height: 1.2; }
@@ -403,7 +426,7 @@ footer {
     content: "";
     display: table;
     clear: both; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-row {
       width: 100%;
       margin-bottom: 1rem; } }
@@ -417,7 +440,7 @@ footer {
   height: 20rem;
   padding: 0;
   border-radius: .5rem; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-col {
       width: 100%;
       margin-bottom: 1rem; } }
@@ -428,7 +451,7 @@ footer {
     margin-right: 2rem; }
   .section-col-wrap {
     text-decoration: none; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .section-col-wrap {
         width: 100%;
         margin-bottom: 1rem; } }
@@ -438,7 +461,7 @@ footer {
     width: 100%;
     border-radius: .5rem;
     background-size: cover; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .section-col-img {
         height: 16rem;
         object-fit: cover; } }
@@ -456,7 +479,7 @@ footer {
   right: 20rem;
   top: -8rem;
   background-color: #fff; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-what {
       top: 0;
       right: 0;
@@ -481,7 +504,7 @@ footer {
     height: 35rem;
     width: 30rem;
     overflow: auto; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .section-what-frame {
         width: 100%; } }
     .section-what-frame.active {
@@ -548,7 +571,7 @@ footer {
 
 .section-body {
   transform: translateY(-2rem) translateX(-15rem); }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-body {
       width: 100%;
       transform: translateY(0); } }
@@ -568,7 +591,7 @@ footer {
     .section-body-ext-wrap {
       text-align: center;
       overflow: hidden; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .section-body-ext-wrap {
           width: 100%; } }
     .section-body-ext-heading {
@@ -584,16 +607,13 @@ footer {
       height: 38rem;
       width: 100%;
       object-fit: cover; }
-      @media (max-width: 75em) {
-        .section-body-ext-img {
-          width: 100%;
-          height: 20rem; } }
     .section-body-ext-label {
       display: inline-block;
       position: relative; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .section-body-ext-label {
-          display: block; } }
+          display: block;
+          width: 100%; } }
       .section-body-ext-label-tag {
         padding: .5rem 1rem .5rem 1rem;
         position: absolute;
@@ -666,6 +686,10 @@ footer {
 .feature-box {
   display: inline-block;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .feature-box {
+      width: 100%;
+      height: 20rem; } }
 
 .theme {
   position: absolute;

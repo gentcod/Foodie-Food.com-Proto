@@ -32,4 +32,8 @@
         border: 1px solid $color-white-2;
         transform: translateY(.5rem);
     }
+
+    @include respond(tab-land) {
+        margin: 0 auto;
+    }
 }

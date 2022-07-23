@@ -47,11 +47,7 @@ menu{
         text-decoration: none;
           
         @include respond(tap-land) {
-            margin-left: 25rem;
-        }
-
-        @include respond(tab-port) {
-            margin-left: 5rem;
+            
         }
         
     
@@ -109,6 +105,10 @@ menu{
                     
                 }
             }
+
+        }
+        @include respond(tab-land) {
+            display: none;
         }
     }
 
@@ -142,6 +142,11 @@ menu{
             &:hover{
                 text-decoration: underline;
             }
+        }
+
+        @include respond(tab-land) {
+            transform: translate(0);
+            max-width: inherit;
         }
     }
 }
