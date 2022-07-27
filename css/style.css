@@ -105,6 +105,48 @@ body {
   .headtitle-content-btn {
     margin: 0 auto; } }
 
+.theme {
+  display: inline-block;
+  height: 2.5rem;
+  width: 8rem;
+  border-radius: 1rem;
+  background-color: white;
+  transform: translateX(-5rem);
+  cursor: pointer; }
+  @media only screen and (max-width: 75em) {
+    .theme {
+      position: absolute;
+      top: 2.5rem;
+      right: 0; } }
+  .theme__container {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .theme__change {
+    color: #222;
+    font-size: 1.8rem; }
+  .theme__light {
+    color: #f8ac09;
+    position: absolute;
+    top: 20%;
+    right: 5%; }
+  .theme__dark {
+    position: absolute;
+    top: 20%;
+    left: 5%; }
+  .theme__toggle-ball {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #2b3130;
+    transition: all .8s; }
+    .theme__toggle-ball.active {
+      background-color: #7b928f;
+      transform: translateX(5.6rem); }
+
 .suggestions {
   display: inline-block;
   color: #222;
@@ -150,192 +192,6 @@ body {
 
 .socials:hover {
   color: #6ddee2; }
-
-.header {
-  height: 45rem;
-  width: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(52, 90, 106, 0.8)), url(/img/background.jpg);
-  background-size: cover;
-  background-position: top;
-  margin: 0 auto;
-  position: relative; }
-
-menu {
-  max-width: 100%;
-  height: 10rem;
-  background-color: rgba(52, 90, 106, 0.9);
-  background-position: top;
-  background-attachment: fixed;
-  padding: 0;
-  overflow: hidden;
-  display: block;
-  position: sticky;
-  top: 0;
-  margin: 0 auto;
-  z-index: 5; }
-  @media only screen and (max-width: 56.25em) {
-    menu {
-      height: 6rem; } }
-  menu.active {
-    background-color: rgba(27, 46, 54, 0.9); }
-
-.header-menu {
-  height: 100%;
-  margin: 0 auto; }
-
-.header::after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.header-logo {
-  display: inline-block;
-  width: 20rem;
-  height: 7rem;
-  margin-left: 35rem;
-  text-decoration: none; }
-  .header-logo-word {
-    display: inline-block;
-    text-decoration: none; }
-    .header-logo-word .food {
-      display: inline-block;
-      font-family: 'Artifika', serif;
-      font-size: 4.5rem;
-      text-align: right;
-      color: #fff; }
-    .header-logo-word .dot {
-      display: inline-block;
-      font-family: 'Artifika', serif;
-      font-size: 4.5rem;
-      text-align: right;
-      color: yellow; }
-
-.header-nav {
-  display: inline-block;
-  width: 75rem;
-  margin: 0 auto;
-  margin-top: 2rem; }
-  .header-nav::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .header-nav--item {
-    float: left;
-    list-style: none;
-    width: calc((100% - 6rem) / 2);
-    padding: 1rem; }
-    .header-nav--item li {
-      display: inline-block; }
-      .header-nav--item li a:link, .header-nav--item li a:visited {
-        font-size: 1.4rem;
-        color: #fff;
-        text-align: center;
-        padding: 2rem 1rem;
-        text-decoration: none;
-        letter-spacing: .2rem; }
-      .header-nav--item li a:hover {
-        color: #6ddee2; }
-  @media only screen and (max-width: 75em) {
-    .header-nav {
-      display: none; } }
-
-.header-logo-info {
-  max-width: fit-content;
-  position: relative;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  text-align: center;
-  background-color: #6ddee2;
-  display: inline-block;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transform: translate(43rem);
-  clip-path: polygon(0% 25%, 20% 25%, 20% 0%, 23% 25%, 100% 20%, 100% 100%, 0% 100%);
-  border-radius: 1rem; }
-  .header-logo-info.active {
-    background-color: #478485; }
-  .header-logo-info-fave:active,
-  .header-logo-info :link,
-  .header-logo-info :visited {
-    text-decoration: none;
-    color: #222; }
-    .header-logo-info-fave:active:hover,
-    .header-logo-info :link:hover,
-    .header-logo-info :visited:hover {
-      text-decoration: underline; }
-  @media only screen and (max-width: 75em) {
-    .header-logo-info {
-      transform: translate(0);
-      max-width: inherit; } }
-
-.headtitle-container {
-  display: block;
-  height: 20rem;
-  width: 100rem;
-  margin: 0 auto;
-  margin-top: 10rem; }
-
-.headtitle-content {
-  height: inherit;
-  width: inherit;
-  margin: 0 auto;
-  padding: 3rem;
-  position: relative; }
-  .headtitle-content-heading {
-    height: 20rem;
-    width: 60rem;
-    padding: 0;
-    margin-bottom: 5rem;
-    display: inline-block; }
-    .headtitle-content-heading--word-replace {
-      visibility: hidden; }
-      .headtitle-content-heading--word-replace:hover::before {
-        text-decoration: underline;
-        text-decoration-color: #fff; }
-      .headtitle-content-heading--word-replace::before {
-        display: inline-block;
-        line-height: 1.2;
-        letter-spacing: .2rem;
-        padding: .5rem;
-        font-size: 4rem;
-        font-weight: 550;
-        color: #fff;
-        box-sizing: border-box;
-        width: 45rem;
-        visibility: visible;
-        position: relative;
-        content: "OUR TOP 50 MOST-SAVED RECIPES";
-        animation: replace infinite 15s; }
-
-.row {
-  max-width: 120rem;
-  margin: 0 auto; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row [class*="col-"] {
-    float: left;
-    padding: 1.5rem; }
-    .row [class*="col-"]:not(:last-child) {
-      margin-right: 1rem; }
-  @media only screen and (max-width: 56.25em) {
-    .row {
-      max-width: 100%; } }
-
-.col-1-of-4 {
-  width: calc((100% - (1rem * 3)) / 4); }
-  @media only screen and (max-width: 56.25em) {
-    .col-1-of-4 {
-      width: calc(100%); } }
-
-.col-2-of-4 {
-  width: calc((100% - 1rem) / 2); }
-  @media only screen and (max-width: 56.25em) {
-    .col-2-of-4 {
-      width: inherit; } }
 
 footer {
   background-color: #222;
@@ -417,6 +273,237 @@ footer {
   text-align: right;
   text-decoration: none; }
 
+.row {
+  max-width: 120rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class*="col-"] {
+    float: left;
+    padding: 1.5rem; }
+    .row [class*="col-"]:not(:last-child) {
+      margin-right: 1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 100%; } }
+
+.col-1-of-4 {
+  width: calc((100% - (1rem * 3)) / 4); }
+  @media only screen and (max-width: 56.25em) {
+    .col-1-of-4 {
+      width: calc(100%); } }
+
+.col-2-of-4 {
+  width: calc((100% - 1rem) / 2); }
+  @media only screen and (max-width: 56.25em) {
+    .col-2-of-4 {
+      width: inherit; } }
+
+.header {
+  height: 45rem;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(52, 90, 106, 0.8)), url(/img/background.jpg);
+  background-size: cover;
+  background-position: top;
+  margin: 0 auto;
+  position: relative; }
+
+menu {
+  max-width: 100%;
+  height: 10rem;
+  background-position: top;
+  background-attachment: fixed;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 5; }
+  @media only screen and (max-width: 56.25em) {
+    menu {
+      height: 6rem; } }
+
+.header-menu {
+  max-height: 20%;
+  margin: 0 auto;
+  background-color: rgba(52, 90, 106, 0.9);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .header-menu {
+      display: block;
+      max-height: 25%; } }
+  .header-menu.active {
+    background-color: rgba(27, 46, 54, 0.9); }
+
+.header::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.header-logo {
+  display: inline-block;
+  width: 20rem;
+  height: 100%;
+  margin-left: 35rem;
+  text-decoration: none; }
+  .header-logo-word {
+    display: inline-block;
+    text-decoration: none; }
+    .header-logo-word .food {
+      display: inline-block;
+      font-family: 'Artifika', serif;
+      font-size: 4.5rem;
+      text-align: right;
+      color: #fff; }
+    .header-logo-word .dot {
+      display: inline-block;
+      font-family: 'Artifika', serif;
+      font-size: 4.5rem;
+      text-align: right;
+      color: yellow; }
+
+.header-nav {
+  display: inline-block;
+  width: 75rem;
+  margin: 0 auto;
+  border-radius: 3px;
+  transition: all 1s; }
+  .header-nav::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .header-nav.active {
+    background-color: #1b2e36; }
+  .header-nav-cont {
+    width: 10rem;
+    height: 100%;
+    text-align: center;
+    display: none; }
+    .header-nav-cont-icon {
+      font-size: 3.6rem;
+      color: #fff; }
+    @media only screen and (max-width: 75em) {
+      .header-nav-cont {
+        display: inline-block; } }
+  .header-nav--item {
+    float: left;
+    list-style: none;
+    width: calc((100% - 6rem) / 2);
+    padding: 1rem; }
+    @media only screen and (max-width: 75em) {
+      .header-nav--item {
+        float: none;
+        width: 100%;
+        z-index: 10; } }
+    .header-nav--item li {
+      display: inline-block;
+      padding: .5rem 0; }
+      .header-nav--item li a:link, .header-nav--item li a:visited {
+        font-size: 1.4rem;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+        text-decoration: none;
+        letter-spacing: .2rem; }
+      .header-nav--item li a:hover {
+        color: #6ddee2; }
+      @media only screen and (max-width: 75em) {
+        .header-nav--item li {
+          width: 100%;
+          display: block; } }
+  @media only screen and (max-width: 75em) {
+    .header-nav {
+      display: none;
+      width: 80%;
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      background-color: #345a6a;
+      z-index: 10;
+      padding: 1rem;
+      text-align: center; } }
+  @media only screen and (max-width: 56.25em) {
+    .header-nav {
+      width: 100%; } }
+
+.header-logo-info {
+  max-width: fit-content;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+  background-color: #6ddee2;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transform: translate(43rem);
+  clip-path: polygon(0% 25%, 20% 25%, 20% 0%, 23% 25%, 100% 20%, 100% 100%, 0% 100%);
+  border-radius: 1rem; }
+  .header-logo-info.active {
+    background-color: #478485; }
+  .header-logo-info-fave:active,
+  .header-logo-info :link,
+  .header-logo-info :visited {
+    text-decoration: none;
+    color: #222; }
+    .header-logo-info-fave:active:hover,
+    .header-logo-info :link:hover,
+    .header-logo-info :visited:hover {
+      text-decoration: underline; }
+  @media only screen and (max-width: 75em) {
+    .header-logo-info {
+      transform: translate(0);
+      max-width: inherit; } }
+
+.headtitle-container {
+  display: block;
+  height: 20rem;
+  width: 100rem;
+  margin: 0 auto;
+  margin-top: 10rem; }
+
+.headtitle-content {
+  height: inherit;
+  width: inherit;
+  margin: 0 auto;
+  padding: 3rem;
+  position: relative; }
+  .headtitle-content-heading {
+    height: 20rem;
+    width: 60rem;
+    padding: 0;
+    margin-bottom: 5rem;
+    display: inline-block; }
+    .headtitle-content-heading--word-replace {
+      visibility: hidden; }
+      .headtitle-content-heading--word-replace:hover::before {
+        text-decoration: underline;
+        text-decoration-color: #fff; }
+      .headtitle-content-heading--word-replace::before {
+        display: inline-block;
+        line-height: 1.2;
+        letter-spacing: .2rem;
+        padding: .5rem;
+        font-size: 4rem;
+        font-weight: 550;
+        color: #fff;
+        box-sizing: border-box;
+        width: 45rem;
+        visibility: visible;
+        position: relative;
+        content: "OUR TOP 50 MOST-SAVED RECIPES";
+        animation: replace infinite 15s; }
+
+.hidden {
+  display: inline-block; }
+
 .section-row {
   width: 64rem;
   margin: 0 auto; }
@@ -428,7 +515,7 @@ footer {
     clear: both; }
   @media only screen and (max-width: 75em) {
     .section-row {
-      width: 100%;
+      max-width: 100%;
       margin-bottom: 1rem; } }
 
 .section-col {
@@ -442,7 +529,9 @@ footer {
   border-radius: .5rem; }
   @media only screen and (max-width: 75em) {
     .section-col {
+      float: none;
       width: 100%;
+      max-height: 20vh;
       margin-bottom: 1rem; } }
   .section-col.active {
     background-color: #cacaca;
@@ -463,7 +552,7 @@ footer {
     background-size: cover; }
     @media only screen and (max-width: 75em) {
       .section-col-img {
-        height: 16rem;
+        max-height: 16rem;
         object-fit: cover; } }
   .section-col-text {
     text-align: center;
@@ -472,6 +561,9 @@ footer {
     font-size: 12px; }
     .section-col-text:hover {
       color: #920397; }
+    @media only screen and (max-width: 37.5em) {
+      .section-col-text {
+        font-size: 1.6rem; } }
 
 .section-what {
   display: inline-block;
@@ -690,41 +782,3 @@ footer {
     .feature-box {
       width: 100%;
       height: 20rem; } }
-
-.theme {
-  position: absolute;
-  top: 35%;
-  right: 2%;
-  height: 2.5rem;
-  width: 8rem;
-  border-radius: 1rem;
-  background-color: white;
-  cursor: pointer; }
-  .theme__container {
-    position: relative;
-    width: 100%;
-    height: 100%; }
-  .theme__change {
-    color: #222;
-    font-size: 1.8rem; }
-  .theme__light {
-    color: #f8ac09;
-    position: absolute;
-    top: 20%;
-    right: 5%; }
-  .theme__dark {
-    position: absolute;
-    top: 20%;
-    left: 5%; }
-  .theme__toggle-ball {
-    position: absolute;
-    top: 10%;
-    left: 2%;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    background-color: #2b3130;
-    transition: all .8s; }
-    .theme__toggle-ball.active {
-      background-color: #7b928f;
-      transform: translateX(5.6rem); }

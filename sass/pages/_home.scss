@@ -10,7 +10,7 @@
         @include clearfix;
 
         @include respond(tab-land) {
-            width: 100%;
+            max-width: 100%;
             margin-bottom: 1rem;
         }
     }
@@ -26,7 +26,9 @@
         border-radius: .5rem;
 
         @include respond(tab-land) {
+            float: none;
             width: 100%;
+            max-height: 20vh;
             margin-bottom: 1rem;
         }
 
@@ -56,7 +58,7 @@
             background-size: cover;
 
             @include respond(tab-land) {
-                height: 16rem;
+                max-height: 16rem;
                 object-fit: cover;
             }
         }
@@ -70,6 +72,9 @@
                 color: $color-magenta;
             }
             
+            @include respond(phone) {
+                font-size: 1.6rem;
+            }
         }
     }
 
