@@ -196,9 +196,10 @@ menu{
             }
         }
 
-        @include respond(tab-land) {
+        @include respond(phone) {
             transform: translate(0);
-            max-width: inherit;
+            display: block;
+            clip-path: none;
         }
     }
 }
