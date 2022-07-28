@@ -55,6 +55,10 @@ menu{
         height: 100%;
         margin-left: 35rem;
         text-decoration: none;
+
+        @include respond(phone) {
+            margin-left: 0;
+        }
         
         &-word{
             display: inline-block;
@@ -92,10 +96,11 @@ menu{
         }
 
         &-cont {
-            width: 10rem;
+            width: fit-content;
             height: 100%;
             text-align: center;
             display: none;
+            margin: 1rem;
 
             &-icon {
                 font-size: 3.6rem;
@@ -208,24 +213,32 @@ menu{
     &-container {
         display: block;
         height: 20rem;
-        width: 100rem;
+        max-width: 100rem;
         margin: 0 auto;
         margin-top: 10rem;
+
+        @include respond(phone) {
+            margin-top: 5rem;
+        }
     }
     
     &-content {
         height: inherit;
-        width: inherit;
+        width: 100%;
         margin: 0 auto;
         padding: 3rem;
         position: relative;
 
         &-heading {
-            height: 20rem;
-            width: 60rem;
+            max-height: 20rem;
+            max-width: 60rem;
             padding: 0;
             margin-bottom: 5rem;
             display: inline-block;
+
+            @include respond(phone) {
+                max-width: 100%;
+            }
 
             &--word-replace {
                 visibility: hidden;
@@ -250,6 +263,11 @@ menu{
                     position: relative;
                     content: "OUR TOP 50 MOST-SAVED RECIPES";
                     animation: replace infinite 15s;
+
+                    @include respond(phone) {
+                        font-size: 3rem;
+                        max-width: 100%;
+                    }
                 }
                 
             }

@@ -25,6 +25,10 @@
     padding-right: 1rem;
     margin: 0 auto;
 
+    @include respond(phone) {
+        padding: 1rem;
+    }
+
     }
     &-inner{
         display: inline-block;
@@ -40,6 +44,9 @@
         letter-spacing: 1.7;
         margin-right: .5rem;
         
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
     }
 }
 .socials{

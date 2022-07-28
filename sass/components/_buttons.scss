@@ -15,6 +15,11 @@
         animation: but-anime 1s ease-in;
         animation-fill-mode: backwards;
 
+        @include respond(tab-land) {
+            display: block;
+            margin-top: 10rem;
+        }
+
     &.active {
         background-color: $color-green-cyde-dark;
 
@@ -32,10 +37,6 @@
         border: 1px solid $color-white-2;
         transform: translateY(.5rem);
     }
-
-    @include respond(tab-land) {
-        margin: 0 auto;
-    }
 }
 
 .theme {
@@ -51,6 +52,7 @@
         position: absolute;
         top: 2.5rem;
         right: 0;
+        transform: translateX(0);
     }
 
     &__container {

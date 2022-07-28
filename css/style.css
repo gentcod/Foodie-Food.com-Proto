@@ -87,6 +87,10 @@ body {
   transition: all .8s ease;
   animation: but-anime 1s ease-in;
   animation-fill-mode: backwards; }
+  @media only screen and (max-width: 75em) {
+    .headtitle-content-btn:link, .headtitle-content-btn:visited {
+      display: block;
+      margin-top: 10rem; } }
   .headtitle-content-btn:link.active, .headtitle-content-btn:visited.active {
     background-color: #478485; }
     .headtitle-content-btn:link.active:hover, .headtitle-content-btn:visited.active:hover {
@@ -101,10 +105,6 @@ body {
   border: 1px solid #cacaca;
   transform: translateY(0.5rem); }
 
-@media only screen and (max-width: 75em) {
-  .headtitle-content-btn {
-    margin: 0 auto; } }
-
 .theme {
   display: inline-block;
   height: 2.5rem;
@@ -117,7 +117,8 @@ body {
     .theme {
       position: absolute;
       top: 2.5rem;
-      right: 0; } }
+      right: 0;
+      transform: translateX(0); } }
   .theme__container {
     position: relative;
     width: 100%;
@@ -168,6 +169,9 @@ body {
   padding-top: 1rem;
   padding-right: 1rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 37.5em) {
+    .comment-wrap-outer {
+      padding: 1rem; } }
 
 .comment-wrap-inner {
   display: inline-block;
@@ -181,6 +185,9 @@ body {
   font-weight: 700;
   letter-spacing: 1.7;
   margin-right: .5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .comment-wrap-heading {
+      font-size: 1.6rem; } }
 
 .socials:link, .socials:visited {
   color: #fff;
@@ -351,6 +358,9 @@ menu {
   height: 100%;
   margin-left: 35rem;
   text-decoration: none; }
+  @media only screen and (max-width: 37.5em) {
+    .header-logo {
+      margin-left: 0; } }
   .header-logo-word {
     display: inline-block;
     text-decoration: none; }
@@ -380,10 +390,11 @@ menu {
   .header-nav.active {
     background-color: #1b2e36; }
   .header-nav-cont {
-    width: 10rem;
+    width: fit-content;
     height: 100%;
     text-align: center;
-    display: none; }
+    display: none;
+    margin: 1rem; }
     .header-nav-cont-icon {
       font-size: 3.6rem;
       color: #fff; }
@@ -466,22 +477,28 @@ menu {
 .headtitle-container {
   display: block;
   height: 20rem;
-  width: 100rem;
+  max-width: 100rem;
   margin: 0 auto;
   margin-top: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .headtitle-container {
+      margin-top: 5rem; } }
 
 .headtitle-content {
   height: inherit;
-  width: inherit;
+  width: 100%;
   margin: 0 auto;
   padding: 3rem;
   position: relative; }
   .headtitle-content-heading {
-    height: 20rem;
-    width: 60rem;
+    max-height: 20rem;
+    max-width: 60rem;
     padding: 0;
     margin-bottom: 5rem;
     display: inline-block; }
+    @media only screen and (max-width: 37.5em) {
+      .headtitle-content-heading {
+        max-width: 100%; } }
     .headtitle-content-heading--word-replace {
       visibility: hidden; }
       .headtitle-content-heading--word-replace:hover::before {
@@ -501,6 +518,10 @@ menu {
         position: relative;
         content: "OUR TOP 50 MOST-SAVED RECIPES";
         animation: replace infinite 15s; }
+        @media only screen and (max-width: 37.5em) {
+          .headtitle-content-heading--word-replace::before {
+            font-size: 3rem;
+            max-width: 100%; } }
 
 .hidden {
   display: inline-block; }
@@ -527,7 +548,8 @@ menu {
   width: 20rem;
   height: 20rem;
   padding: 0;
-  border-radius: .5rem; }
+  border-radius: .5rem;
+  overflow: hidden; }
   @media only screen and (max-width: 75em) {
     .section-col {
       float: none;
@@ -550,21 +572,17 @@ menu {
     background-attachment: fixed;
     width: 100%;
     border-radius: .5rem;
-    background-size: cover; }
+    object-fit: cover; }
     @media only screen and (max-width: 75em) {
       .section-col-img {
-        max-height: 16rem;
-        object-fit: cover; } }
+        max-height: 80%; } }
   .section-col-text {
     text-align: center;
     text-decoration: none;
     color: #222;
-    font-size: 12px; }
+    font-size: 1.2rem; }
     .section-col-text:hover {
       color: #920397; }
-    @media only screen and (max-width: 37.5em) {
-      .section-col-text {
-        font-size: 1.6rem; } }
 
 .section-what {
   display: inline-block;
@@ -682,6 +700,7 @@ menu {
     .section-body-ext a:hover {
       color: #920397; }
     .section-body-ext-wrap {
+      border-radius: 3px;
       text-align: center;
       overflow: hidden; }
       @media only screen and (max-width: 56.25em) {
@@ -743,12 +762,15 @@ menu {
     background-image: linear-gradient(to right, #f20d80, #270240);
     padding: 8rem;
     text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .section-body-end {
+        padding: 1rem; } }
     .section-body-end-cont {
-      width: 50rem;
+      max-width: 50rem;
       margin: 0 auto; }
     .section-body-end input {
       border: 0;
-      margin-bottom: 5px;
+      margin-bottom: .5rem;
       font-size: 1.2rem;
       width: 25rem; }
     .section-body-end input:focus {

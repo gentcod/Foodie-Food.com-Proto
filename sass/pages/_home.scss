@@ -24,6 +24,7 @@
         height: 20rem;
         padding: 0;
         border-radius: .5rem;
+        overflow: hidden;
 
         @include respond(tab-land) {
             float: none;
@@ -55,25 +56,21 @@
             background-attachment: fixed;
             width: 100%;
             border-radius: .5rem;
-            background-size: cover;
+            object-fit: cover;
+
 
             @include respond(tab-land) {
-                max-height: 16rem;
-                object-fit: cover;
+                max-height: 80%;
             }
         }
         &-text{
             text-align: center;
             text-decoration: none;
             color: $color-black;
-            font-size: 12px;
+            font-size: 1.2rem;
     
             &:hover{
                 color: $color-magenta;
-            }
-            
-            @include respond(phone) {
-                font-size: 1.6rem;
             }
         }
     }
@@ -239,6 +236,7 @@
             }
 
             &-wrap{
+                border-radius: 3px;
                 text-align: center;
                 overflow: hidden;
 
@@ -318,14 +316,18 @@
             padding: 8rem;
             text-align: center;
 
+            @include respond(phone) {
+                padding: 1rem;
+            }
+
             &-cont{
-                width: 50rem;
+                max-width: 50rem;
                 margin: 0 auto;
             }
 
             & input{
                 border: 0;
-                margin-bottom: 5px;
+                margin-bottom: .5rem;
                 font-size: 1.2rem;
                 width: 25rem;
 
